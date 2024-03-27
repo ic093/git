@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            margin: 0;
+            padding: 0;
+            background-color:#f1f2f3;
+        }
+        .container{
+            width: 200px;
+            height: 100px;
+            padding-top: 100px;
+            margin: 0 auto;
+        }
+        .ball{
+            width: 90px;
+            height: 10px;
+            margin: 10px auto;
+            border-radius: 50px;
+        }
+        .ball:nth-child(1){
+            background-color: brown;
+            animation: right 3s infinite 0.5s ease-in-out;
+        }
+        .ball:nth-child(2){
+            background-color: aquamarine;
+            animation: left 3s infinite 0.5s ease-in-out;
+        }
+        .ball:nth-child(3){
+         background-color: slateblue;  
+         animation: right 3s infinite 0.5s ease-in-out;
+        } 
+
+        
+        .ball:nth-child(4){
+            background-color: burlywood;
+            animation: left 3s infinite 0.5s ease-in-out;
+        }
+        .ball:nth-child(5){
+            background-color: cornflowerblue;
+            animation: right 3s infinite 0.5s ease-in-out;
+
+            
+        }
+        p{
+            font-size: 20px;
+            text-align: center;
+            color:lightseagreen;
+            animation: show 2s infinite ease-in-out;
+        }
+        @keyframes right{
+            0%{transform: translate(-20px);}
+            50%{transform: translate(20px);}
+            100%{transform: translate(-20px);}
+        }
+        @keyframes left{
+            0%{transform: translate(20px);}
+            50%{transform: translate(-20px);}
+            100%{transform: translate(20px);}
+        }
+        @keyframes show{
+            0%{opacity: 0;}
+            50%{opacity: 1;}
+            100%{opacity: 0;}
+        }
+        .logo{
+            
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="ball"></div>
+        <div class="ball"></div>
+        <div class="ball"></div>
+        <div class="ball"></div>
+        <div class="ball"></div>
+        <p>Loading.....</p>
+       <div class="logo"> <img src="./Ellipsis-5s-78px.svg" alt=""></div>
+    </div>
+</body>
+</html>

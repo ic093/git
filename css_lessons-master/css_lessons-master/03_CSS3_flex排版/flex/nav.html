@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RWD主導覽練習檔</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box
+        }
+
+        @import url('https://fonts.googleapis.com/css2?family=Dosis&family=Mukta:wght@300&display=swap');
+
+        /* font-family: 'Mukta', sans-serif; 
+            font-family: 'Dosis';
+        */
+        /* 電腦與平板上應用的樣式 */
+        body {
+            background-color: rgb(237, 237, 237);
+            margin: 0px;
+            font-size: 14px;
+        }
+
+        header {
+            background-color: pink;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .menu {
+            display: none;
+        }
+
+        .logo {
+            width: 100px;
+            height: 50px;
+            background-color: brown;
+            color: antiquewhite;
+            display: flex;
+            align-items: center;
+            justify-items: center;
+
+        }
+
+        ol {
+            width: 100%;
+            padding: 0;
+            margin: 0;
+            list-style-type: none;
+            display: flex;
+
+        }
+        ol li{
+            width: 24%;
+        }
+        ol li a {
+            text-decoration: none;
+            padding: 1em;
+            background-color: chocolate;
+            border: 1px solid black;
+            color: azure;
+            font-size: 10px;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+        }
+
+        .menu {
+            width: 35px;
+            height: 35px;
+            background-color: blueviolet;
+            border: 1px solid black;
+        }
+
+
+
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            width: 40%;
+        }
+.container{
+    width: 80%;
+    max-width: 1200px;
+    margin: auto;
+}
+.photo-list{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+.photo-list li{
+    width: 32%;
+    height: 200px;
+    background-color: aquamarine;
+}
+
+        /* 手機 */
+        @media screen and (max-width: 500px) {
+            .menu {
+                padding: 10px;
+                height: 40px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                background-color: purple;
+                color: white;
+            }
+
+            header {
+                
+                flex-wrap: wrap;
+            }
+
+            .navbar {
+                width: 100%;
+            }
+
+            ol {
+                width: 100%;
+                flex-wrap: wrap;
+            }
+
+            ol li {
+                width: 100%;
+                border-bottom: 1px solid white;
+            }
+            .photo-list li:not(odd){
+                background-color: blueviolet;
+            }
+        }
+.photo-list-li{
+    width: 46%;
+}
+.photo-list li:nth-child(3){
+    order: 4;
+}
+.photo-list li:nth-child(3){
+    order: 3;
+}
+.photo-list li:nth-child(3){
+    order: 5;
+}
+.photo-list li:nth-child(3){
+    order: 6;
+}
+        
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="logo">lala</div>
+            <div class="menu">menu</div>
+        <nav class="navbar">
+            
+            <ol>
+                <li><a href="">產品</a> </li>
+                <li><a href="">作品</a> </li>
+                <li><a href="">關於</a> </li>
+                <li><a href="">信箱</a> </li>
+            </ol>
+            </ol>
+        </nav>
+    </header>
+    <section id="photo">
+        <div class="container">
+            <ul class="photo-list">
+                <li>img</li>
+                <li>test</li>
+                <li>img</li>
+                <li>test</li>
+                <li>img</li>
+                <li>test</li>
+            </ul>
+        </div>
+
+    </section>
+    
+</body>
+
+</html>

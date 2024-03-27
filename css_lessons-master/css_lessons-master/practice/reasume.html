@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<style>
+    .container{
+        display: grid;
+        grid-template-columns: repeat(5,1fr);
+        grid-template-rows: repeat(3,200px);
+        width: 80%;
+        max-width: 1200px;
+        margin: 100px auto ; 
+    }
+    .card{
+        overflow: hidden;
+    }
+    .side-fond img{
+        width: 100%;
+    }
+    .pic1{
+        grid-area:  1 / 4 / 2 / 6;
+    }
+    .pic2{
+        grid-area:  2 /1 / 4 / 3;
+    }
+    .pic3{
+        grid-area: 3 / 3 / 4 / 5;
+    }
+    .card:nth-child(1) img{
+        height: 200px;
+    }
+    .card:nth-child(6) img{
+        height: 200px;
+    }
+</style>
+
+
+</head>
+<body>
+    <div class="container">
+        <div class="card">
+            <div class="side-fond">
+     <img src="./image_reasue/image/japan.jpg" alt="">
+            </div>
+        </div>
+        <div class="container">
+            <div class="card">
+                <div class="side-fond">
+                    <img src="./image_reasue/image/japan2.jpg" alt="">
+                </div>
+            </div>
+            <div class="container">
+                <div class="card">
+                    <div class="side-fond">
+                        <img src="./image_reasue/image/pancake.jpg" alt="">
+                    </div>
+                </div>
+                <div class="container">
+                    <div class="card pic1">
+                        <div class="side-fond">
+                            <img src="./image_reasue/image/japan3.jpg" alt="">
+                        </div>
+                    </div>
+                    <div class="container">
+                        <div class="card pic2">
+                            <div class="side-fond">
+                                <img src="./image_reasue/image/" alt="">
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="side-fond">
+                                <img src="./image_reasue/image/japan.jpg" alt="">
+                            </div>
+                            <div class="card">
+                                <div class="side-fond">
+                                    <img src="./image_reasue/image/japan.jpg" alt="">
+                                </div>
+                                <div class="card">
+                                    <div class="side-fond">
+                                        <img src="./image_reasue/image/japan.jpg" alt="">
+                                    </div>
+                                    <div class="card pic3">
+                                        <div class="side-fond">
+                                            <img src="./image_reasue/image/japan.jpg" alt="">
+                                        </div>
+                                        <div class="card">
+                                            <div class="side-fond">
+                                                <img src="./image_reasue/image/japan.jpg" alt="">
+                                            </div>
+    </div>
+</body>
+</html>

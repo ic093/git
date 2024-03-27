@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <style>
+      .container {
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        grid-template-rows: repeat(3, 200px);
+        width: 80%;
+        max-width: 1200px;
+        margin: 100px auto;
+      }
+      .card {
+        overflow: hidden;
+      }
+      .side-font img {
+        width: 100%;
+        height: 100%;
+        max-width: 100%;
+        object-fit: cover;
+      }
+      .pic1 {
+        grid-area: 1 / 4 / 2 /6;
+      }
+      .pic2 {
+        grid-area: 2 / 1 / 4 / 3;
+      }
+      .pic3 {
+        grid-area: 3 / 3 / 4 / 5;
+      }
+      .card:nth-child(1) img {
+        height: 200px;
+        object-fit: cover;
+      }
+      .card:nth-child(6) img {
+        height: 200px;
+        object-fit: cover;
+      }
+      .portfolio {
+        text-align: center;
+        margin-top: 200px;
+      }
+      h2 {
+        color: chocolate;
+      }
+      footer {
+        background-color: black;
+        height: 50px;
+      }
+      h6 {
+        color: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 20px;
+      }
+      #contact {
+        background-image: linear-gradient(
+          to right bottom,
+          #ecb7d5,
+          #dbb3d6,
+          #c9afd4,
+          #b7abd1,
+          #a6a7cb,
+          #95a2c3,
+          #869cb9,
+          #7996ae,
+          #6b8e9f,
+          #60848f,
+          #587b7f,
+          #53716f
+        );
+        height: 800px;
+      }
+      .w-50 {
+        width: 50%;
+        display: flex;
+        align-items: center;
+        padding-top: 50px;
+        margin-left: 500px;
+      }
+      #contactFrom {
+        padding: 30px;
+        border-radius: 15px;
+        box-shadow: 3px 3px 10px #969696;
+        background-color: white;
+        width: 500px;
+        
+      }
+      .form-group {
+        margin-bottom: 20px;
+        display: flex;
+        flex-direction: column;
+        
+  
+      }
+     
+      label {
+        margin-bottom: 8px;
+      }
+      input[type="text"] {
+        height: 40px;
+        border: none;
+        border-radius: 10px;
+        background-color: palegoldenrod;
+        flex-grow: 1;
+        padding: 8px;
+        font-size: 18px;
+      }
+      input[type="text"]:focus {
+        outline: 2px solid papayawhip;
+      }
+      ul {
+        margin: 0;
+        padding: 0;
+        color: white;
+      }
+      ul li {
+        list-style-type: none;
+        flex-direction: column;
+        
+      }
+      .touch {
+        margin-left: 250px;
+      width: 300px;
+        align-items: center;
+        margin-bottom: 200px;}
+        
+   .bt-confirm{
+    
+    margin-left: 200px;
+
+   }
+       
+      
+      .container00 {
+        width: 1000px;
+        display: flex;
+        align-items: center;
+      }
+      h3{
+        font-size: 2rem;
+        color: white;
+      }
+      p{
+        color: white;
+      }
+      #work-experience{
+        background-color: #c9afd4;
+      }
+      .company-logo img{
+        width: 50px;
+        height: 50px;
+      }
+      .company-logo{
+        width: 50px;
+        height: 50px;
+      }
+      .work-period{
+        color: black;
+        width: 150px;
+      font-size: 1.2rem;
+      font-weight:bold;
+
+      }
+      .work{
+        max-width: 80%;
+        margin: 0 auto;
+        padding: 50px 0;
+  
+      }
+     
+     .work-experience-list li{
+     display: flex;
+    align-items: center;
+    align-content: baseline;
+    border-bottom: 1px solid black;
+     }
+    
+    </style>
+  </head>
+  <body>
+<section id="work-experience">
+  <div class="work">
+    <h4>工作經歷</h4>
+    <ul class="work-experience-list">
+
+      <li>
+        <div class="work-period">2019 - Present</div>
+        <div class="company-logo"><img src="../04_RWD排版實務/demo/imgs/google.png" alt="">
+        </div>
+        <div class="job-title">Front-end Developer</div>
+      </li>
+
+      <li>
+        <div class="work-period"> 2017 - 2019</div>
+        <div class="company-logo">
+          <img src="../04_RWD排版實務/demo/imgs/apple.png" alt="">
+        </div>
+        <div class="job-title">Web Designer</div>
+      </li>
+
+      <li>
+        <div class="work-period">2015 - 2017</div>
+        <div class="company-logo">
+          <img src="../04_RWD排版實務/demo/imgs/amazon.png" alt="">
+        </div>
+        <div class="job-title">Full-stack Developer</div>
+        </li>
+
+      <li>
+        <div class="work-period"> 2013 - 2015</div>
+        <div class="company-logo">
+          <img src="../04_RWD排版實務/demo/imgs/microsoft.png" alt="">
+        </div>
+        <div class="job-title">UI/UX Designer</div>
+       </li>
+
+      <li>
+        <div class="work-period">2011 - 2013</div>
+        <div class="company-logo">
+          <img src="../04_RWD排版實務/demo/imgs/meta.png" alt="">
+        </div>
+        <div class="job-title">Back-end Developer</div>
+        </li>
+
+    </ul>
+  </div>
+
+</section>
+
+
+
+    <section class="portfolio">
+      <h2>作品集</h2>
+      <div class="container">
+        <div class="card">
+          <div class="side-font">
+            <img src="./imgs/japan.jpg" alt="" />
+          </div>
+          <div class="side back">project1</div>
+        </div>
+        <div class="card">
+          <div class="side-font">
+            <img src="./imgs/japan2.jpg" alt="" />
+          </div>
+          <div class="side back">project2</div>
+        </div>
+        <div class="card">
+          <div class="side-font">
+            <img src="./imgs/pancake.jpg" alt="" />
+          </div>
+          <div class="side back">project3</div>
+        </div>
+        <div class="card pic1">
+          <div class="side-font">
+            <img src="./imgs/japan3.jpg" alt="" />
+          </div>
+          <div class="side back">project4</div>
+        </div>
+        <div class="card pic2">
+          <div class="side-font">
+            <img src="./imgs/strawberry.jpg" alt="" />
+          </div>
+          <div class="side back">project5</div>
+        </div>
+        <div class="card">
+          <div class="side-font">
+            <img src="./imgs/people1.jpg" alt="" />
+          </div>
+          <div class="side back">project6</div>
+        </div>
+        <div class="card">
+          <div class="side-font">
+            <img src="./imgs/sea.jpg" alt="" />
+          </div>
+          <div class="side back">project7</div>
+        </div>
+        <div class="card">
+          <div class="side-font">
+            <img src="./imgs/photo3.jpg" alt="" />
+          </div>
+          <div class="side back">project8</div>
+        </div>
+        <div class="card pic3">
+          <div class="side-font">
+            <img src="./imgs/japan1.jpg" alt="" />
+          </div>
+          <div class="side back">project9</div>
+        </div>
+        <div class="card">
+          <div class="side-font">
+            <img src="./imgs/people2.jpg" alt="" />
+          </div>
+          <div class="side back">project10</div>
+        </div>
+      </div>
+    </section>
+    <!-- 表單 -->
+
+    <section id="contact">
+      <div class="container00">
+        <div class="touch">
+          <h3>Contact Us</h3>
+          <p> <i class="fa-solid fa-pen"></i> 有任何問題或疑問，請聯絡我們</p>
+          <ul>
+            <li><i class="fa-solid fa-location-dot"></i> 台北市信義區信義路五段7號</li>
+            <li><i class="fa-solid fa-phone"></i> 02-1234-5678</li>
+            <li><i class="fa-solid fa-envelope"></i> example@mail.com</li>
+          </ul>
+        </div>
+        <div class="w-50">
+          <form action="" id="contactFrom">
+            <div class="form-group">
+              <label for="Name">姓名</label>
+              <input type="text" name="name" id="name" />
+            </div>
+            <div class="form-group">
+              <label for="massenger">訊息</label>
+              <input type="text" name="massenger" id="massenger" />
+            </div>
+            <div class="form-group">
+              <label for="phone">電話</label>
+              <input type="text" name="phone" id="phone" />
+            </div>
+            <div class="form-group">
+              <label for="email">E-mail</label>
+              <input type="text" name="email" id="email" />
+            </div>
+            <input type="submit" class="bt-confirm" value="確定送出" />
+          </form>
+        </div>
+      </div>
+    </section>
+    <footer>
+      <h6>copyright&copy;2023 macroViz.com</h6>
+    </footer>
+  </body>
+</html>
