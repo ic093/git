@@ -1,0 +1,1051 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+
+    <style>
+      .container {
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        grid-template-rows: repeat(3, 200px);
+        width: 80%;
+        max-width: 1200px;
+        margin: 100px auto;
+      }
+      .card {
+        overflow: hidden;
+      }
+      .side-font img {
+        width: 100%;
+        height: 100%;
+        max-width: 100%;
+        object-fit: cover;
+      }
+      .pic1 {
+        grid-area: 1 / 4 / 2 /6;
+      }
+      .pic2 {
+        grid-area: 2 / 1 / 4 / 3;
+      }
+      .pic3 {
+        grid-area: 3 / 3 / 4 / 5;
+      }
+      .card:nth-child(1) img {
+        height: 200px;
+        object-fit: cover;
+      }
+      .card:nth-child(6) img {
+        height: 200px;
+        object-fit: cover;
+      }
+      .portfolio {
+        text-align: center;
+      }
+      h2 {
+        color: chocolate;
+      }
+      footer {
+        background-color: black;
+        height: 50px;
+      }
+      footer p {
+        margin: auto;
+        color: #fff;
+        text-align: center;
+        letter-spacing: 1px;
+      }
+      #contact {
+        background-image: linear-gradient(
+          to right bottom,
+          #ecb7d5,
+          #dbb3d6,
+          #c9afd4,
+          #b7abd1,
+          #a6a7cb,
+          #95a2c3,
+          #869cb9,
+          #7996ae,
+          #6b8e9f,
+          #60848f,
+          #587b7f,
+          #53716f
+        );
+        height: 800px;
+      }
+      .w-50 {
+        width: 50%;
+        display: flex;
+        align-items: center;
+        padding-top: 50px;
+        margin-left: 700px;
+      }
+      #contactFrom {
+        padding: 30px;
+        border-radius: 15px;
+        box-shadow: 3px 3px 10px #969696;
+        background-color: white;
+        width: 500px;
+      }
+      .form-group {
+        margin-bottom: 20px;
+        display: flex;
+        flex-direction: column;
+      }
+      label {
+        margin-bottom: 8px;
+        font-size: 30px;
+      }
+      input[type="text"] {
+        height: 40px;
+        border: none;
+        border-radius: 10px;
+        background-color: palegoldenrod;
+        flex-grow: 1;
+        padding: 8px;
+        font-size: 18px;
+      }
+      input[type="text"]:focus {
+        outline: 2px solid papayawhip;
+      }
+      ul {
+        margin: 0;
+        padding: 0;
+        color: white;
+      }
+      ul li {
+        list-style-type: none;
+        flex-direction: column;
+      }
+
+      .touch {
+        width: 550px;
+        align-items: center;
+        margin-bottom: 200px;
+        position: absolute;
+        margin-left: 300px;
+      }
+      .bt-confirm {
+        margin-left: 160px;
+        font-family: arial;
+        color: #14396a !important;
+        font-size: 14px;
+        text-shadow: 1px 1px 0px #7cacde;
+        box-shadow: 1px 3px 3px #bee2f9;
+        padding: 10px 25px;
+        border-radius: 10px;
+        border: 4px solid #3866a3;
+        background: #eec6de;
+        background: linear-gradient(to top, #eec6de, #a193cf);
+      }
+      .bt-confirm:hover {
+        color: #14396a !important;
+        background: #cbb0cf;
+        background: linear-gradient(to top, #cbb0cf, #63b8ee);
+      }
+      .container00 {
+        width: 1000px;
+        display: flex;
+        align-items: center;
+      }
+      h4 {
+        font-size: 60px;
+        color: white;
+        width: 300px;
+        margin-left: 20px;
+      }
+      p {
+        color: white;
+      }
+      #work-experience {
+        background-color: #c9afd4;
+      }
+      .company-logo img {
+        width: 50px;
+        height: 50px;
+      }
+      .company-logo {
+        width: 50px;
+        height: 50px;
+      }
+      .portfolio {
+        background-color: #7996ae;
+        height: 800px;
+      }
+      .portfolio h2 {
+        margin-top: 0px;
+      }
+      h3,
+      ul,
+      p {
+        color: black;
+        font-size: 30px;
+      }
+      ul li {
+        border-bottom: 1px solid gray;
+        align-items: baseline;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        /* font-weight: bold; */
+      }
+      .photo img {
+        width: 50px;
+        height: 50px;
+        margin-left: 150px;
+        border-radius: 100%;
+      }
+      .call {
+        display: flex;
+        margin-left: 40px;
+      }
+      .pro {
+        padding-left: 60px;
+        padding-right: 60px;
+        margin-left: 131px;
+        margin-right: 131px;
+      }
+      .bk {
+        background-color: rgb(226, 197, 197);
+      }
+      h1 {
+        font-size: 30px;
+        text-shadow: 3px 3px 3px #ababab;
+      }
+      body {
+        background-color: rgb(237, 237, 237);
+        margin: 0px;
+        font-size: 14px;
+      }
+      header {
+        background-color: beige;
+        display: flex;
+        justify-content: space-between;
+      }
+      .logo {
+        width: 100px;
+        height: 40px;
+        background-color: brown;
+        color: #fff;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 30px;
+      }
+      ol {
+        padding: 0;
+        margin: 0;
+        list-style-type: none;
+        justify-content: flex-end;
+        display: flex;
+      }
+      ol li {
+        width: 20%;
+        font-size: 30px;
+      }
+      ol li a {
+        height: 40px;
+        text-decoration: none;
+        color: white;
+        background-color: chocolate;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      nav {
+        width: 40%;
+      }
+      .menu {
+        display: none;
+      }
+
+      .persion img {
+        height: 1230px;
+        width: 1000px;
+        margin-top: 30px;
+        margin-right: 150px;
+      }
+      .container4 {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        display: flex;
+        justify-content: center;
+        height: 1600px;
+      }
+      .description h3 {
+        font-size: 40px;
+        text-shadow: 4px 3px 0px #7a7a7a, 9px 10px 2px rgba(206, 89, 55, 0.6);
+        color: #ffffff;
+        background: #f7c1c1;
+        width: 500px;
+        text-align: center;
+      }
+      .description p {
+        -webkit-animation: text-pop-up-top 0.8s
+          cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+        animation: text-pop-up-top 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94)
+          both;
+      }
+      .Introduce p {
+        width: 500px;
+        font-size: 40px;
+        letter-spacing: 5px;
+      }
+      .fa-vial-virus {
+        color: rgb(171, 95, 66);
+      }
+      .fa-book-bookmark {
+        color: rgb(147, 75, 75);
+      }
+      .Degree li {
+        font-size: 26px;
+      }
+      .Degree h3 {
+        font-size: 40px;
+      }
+      .fa-hospital,
+      .fa-stethoscope,
+      .fa-stethoscope,
+      .fa-truck-medical,
+      .fa-hospital-user {
+        color: palevioletred;
+      }
+      .tittle img {
+        width: 130px;
+        height: 130px;
+        border-radius: 50%;
+        margin-left: 100px;
+      }
+      .tittle ul {
+        font-size: 40px;
+        color: brown;
+      }
+      .tittle ul li p {
+        font-size: 40px;
+        color: brown;
+        -webkit-animation: text-focus-in 1s
+          cubic-bezier(0.55, 0.085, 0.68, 0.53) both;
+        animation: text-focus-in 1s cubic-bezier(0.55, 0.085, 0.68, 0.53) both;
+        margin-left: 300px;
+      }
+      @-webkit-keyframes tittle ul li p {
+        0% {
+          -webkit-filter: blur(12px);
+          filter: blur(12px);
+          opacity: 0;
+        }
+        100% {
+          -webkit-filter: blur(0px);
+          filter: blur(0px);
+          opacity: 1;
+        }
+      }
+      @keyframes text-focus-in {
+        0% {
+          -webkit-filter: blur(12px);
+          filter: blur(12px);
+          opacity: 0;
+        }
+        100% {
+          -webkit-filter: blur(0px);
+          filter: blur(0px);
+          opacity: 1;
+        }
+      }
+      .experienced {
+        background-color: bisque;
+        height: 600px;
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      .experienced h3 {
+        padding-left: 13px;
+        font-size: 50px;
+        margin-top: 0px;
+      }
+      .experienced p {
+        margin-left: 50px;
+        font-size: 20px;
+        color: black;
+      }
+      .fa-odysee {
+        color: rgb(170, 88, 55);
+      }
+      .ambu img {
+        width: 100px;
+        height: 100px;
+      }
+      #Portfolio {
+        text-align: center;
+        margin-top: 50px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+      #Portfolio h2 {
+        font-size: 36px;
+        margin-bottom: 0px;
+        width: 100%;
+      }
+      #Portfolio .container {
+        display: grid;
+        width: 80%;
+        grid-template-columns: repeat(5, 1fr);
+        grid-template-rows: repeat(3, 1fr);
+        gap: 10px;
+      }
+      .card {
+        position: relative;
+        overflow: hidden;
+        transform-style: preserve-3d;
+        transition: transform 0.6s;
+      }
+      .side {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        backface-visibility: hidden;
+        transition: transform 0.5s;
+      }
+      .card:nth-child(3) {
+        grid-area: 1 / 3 / 2 / 5;
+      }
+      .card:nth-child(8) {
+        grid-area: 2 / 4 / 2 / 6;
+      }
+      .card:nth-child(6) {
+        grid-area: 2 / 2 / 4 / 4;
+        height: 370px;
+      }
+      .side img {
+        width: 100%;
+        height: 100%;
+        max-width: 100%;
+        object-fit: cover;
+      }
+      .back {
+        display: flex;
+        background: #c1a27a;
+        justify-content: center;
+        align-items: center;
+        font-size: 20px;
+        font-weight: bold;
+        transform: rotateY(180deg);
+        transition: transform 0.5s;
+      }
+      .card:hover .side {
+        transform: rotateY(180deg);
+      }
+      .card:hover .back {
+        transform: rotateY(0deg);
+      }
+      .ambu {
+        animation-name: car;
+        animation-duration: 2s;
+        animation-iteration-count: infinite;
+        animation-direction: alternate;
+      }
+      @keyframes car {
+        from {
+          transform: translateX(0);
+        }
+        to {
+          transform: translateX(200px);
+        }
+      }
+      #Banner {
+        width: 100%;
+        height: 500px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        overflow: hidden;
+      }
+      .slogan {
+        position: absolute;
+        z-index: 3;
+      }
+      .slogan h2 {
+        font-size: 3rem;
+        text-shadow: none;
+      }
+      .circle1 {
+        position: absolute;
+        width: 500px;
+        height: 500px;
+        top: -10%;
+        left: 60%;
+        border-radius: 50%;
+        border: 15px solid #f89e59;
+        z-index: -1;
+        animation: move 10s ease-in infinite;
+      }
+      .circle2 {
+        position: absolute;
+        margin-left: 40%;
+        margin-top: 20%;
+        width: 300px;
+        height: 300px;
+        border-radius: 50%;
+        border: 10px solid #f08ef0;
+        animation: move2 10s ease-in infinite;
+      }
+      .shape {
+        position: absolute;
+        width: 200px;
+        height: 200px;
+        top: 300px;
+        left: 30px;
+        float: left;
+        background-color: coral;
+        animation: squareToCircle 5s 1s infinite alternate;
+      }
+      .triangle {
+        position: absolute;
+        width: 0;
+        height: 0;
+        top: -25%;
+        left: -20%;
+        border-left: 257px solid transparent;
+        border-right: 257px solid transparent;
+        border-bottom: 405px solid rgb(71, 255, 215);
+        position: relative;
+        transform: rotate(30deg);
+        animation: spin 10s ease infinite;
+      }
+      .triangle:after {
+        content: "";
+        position: absolute;
+        top: 15px;
+        left: -240px;
+        width: 0;
+        height: 0;
+        border-left: 240px solid transparent;
+        border-right: 240px solid transparent;
+        border-bottom: 380px solid white;
+      }
+      @keyframes move {
+        0% {
+          left: 70%;
+          top: -10%;
+        }
+        50% {
+          left: 60%;
+          top: 0%;
+        }
+        70% {
+          left: 60%;
+          top: -5%;
+        }
+        100% {
+          left: 70%;
+          top: -10%;
+        }
+      }
+      @keyframes move2 {
+        0% {
+          margin-top: 20%;
+          margin-left: 40%;
+        }
+        50% {
+          margin-top: 10%;
+          margin-left: 40%;
+        }
+        70% {
+          margin-top: 15%;
+          margin-left: 40%;
+        }
+        100% {
+          margin-top: 20%;
+          margin-left: 40%;
+        }
+      }
+      @keyframes spin {
+        0% {
+          transform: rotate(0);
+        }
+        100% {
+          transform: rotate(170deg);
+        }
+      }
+      @keyframes squareToCircle {
+        0% {
+          border-radius: 0 0 0 0;
+          background: coral;
+          transform: rotate(0deg);
+        }
+        25% {
+          border-radius: 50% 0 0 0;
+          background: darksalmon;
+          transform: rotate(45deg);
+        }
+        50% {
+          border-radius: 50% 50% 0 0;
+          background: indianred;
+          transform: rotate(90deg);
+        }
+        75% {
+          border-radius: 50% 50% 50% 0;
+          background: lightcoral;
+          transform: rotate(135deg);
+        }
+        100% {
+          border-radius: 50% 50% 50% 50%;
+          background: darksalmon;
+          transform: rotate(180deg);
+        }
+      }
+      /* 電腦 */
+      @media screen and (min-width: 1024px) {
+        .persion img {
+          width: 95%;
+        }
+        .touch {
+          margin-left: 100px;
+        }
+      }
+      /* 平板 */
+      @media screen and (max-width: 1023px) and (min-width: 768px) {
+        .persion img {
+          width: 550px;
+          height: 550px;
+          position: absolute;
+        }
+
+        .description {
+          margin-top: 560px;
+        }
+        .s {
+          margin-top: 150px;
+
+          margin-left: 200px;
+        }
+        .Degree ul {
+          letter-spacing: 15px;
+        }
+        .tittle ul {
+          font-size: 16px;
+        }
+        .tittle ul li {
+          height: 100px;
+        }
+        .tittle img {
+          width: 50px;
+          height: 50px;
+          margin-left: 30px;
+          margin-right: 30px;
+        }
+        .tittle ul li p {
+          font-size: 20px;
+          display: contents;
+        }
+        .touch h4 {
+          font-size: 40px;
+          height: 10px;
+        }
+        .touch {
+          width: 250px;
+          margin-bottom: 500px;
+          margin-left: 250px;
+        }
+        .touch ul li {
+          font-size: 18px;
+          width: 300px;
+          padding: 5px;
+        }
+        .w-50 {
+          margin-left: 200px;
+        }
+        #contactFrom {
+          height: 300px;
+          width: 300px;
+          position: absolute;
+          margin-top: 300px;
+          left: 14px;
+          margin-left: 200px;
+        }
+        .form-group {
+          margin-top: 0;
+        }
+        label {
+          font-size: 14px;
+        }
+        input[type="text"] {
+          height: 10px;
+        }
+        .bt-confirm {
+          margin-left: 100px;
+          font-size: 8px;
+        }
+        footer p {
+          letter-spacing: 0px;
+          font-size: 16px;
+          align-items: center;
+        }
+        nav {
+          width: 100%;
+        }
+      }
+
+      /* 手機板 */
+      @media screen and (max-width: 767px) {
+        .menu {
+          height: 40px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          padding: 10px;
+          background-color: blueviolet;
+          color: white;
+          margin-right: 15px;
+        }
+        body {
+          width: 440px;
+        }
+
+        header {
+          flex-wrap: wrap;
+        }
+        nav {
+          width: 100%;
+        }
+        ol {
+          flex-direction: column;
+        }
+        ol li {
+          width: 100%;
+          border-bottom: 1px solid black;
+        }
+        .persion img {
+          margin-top: 30px;
+          margin-right: 150px;
+          height: 600px;
+          width: 400px;
+          position: absolute;
+        }
+        .persion {
+          position: absolute;
+          margin-left: 0px;
+          margin-right: 400px;
+        }
+        .description {
+          margin-top: 600px;
+          margin-left: 100px;
+        }
+        .description h3 {
+          width: 400px;
+          margin-right: 100px;
+        }
+        .Introduce p {
+          font-size: 30px;
+          width: 400px;
+          margin-left: 23px;
+          letter-spacing: 1px;
+        }
+        .Degree ul li {
+          margin-left: 30px;
+        }
+        .experienced {
+          width: 400px;
+          margin-top: 30px;
+          display: flex;
+          margin-left: 13px;
+        }
+        .experienced h3 {
+          font-size: 30px;
+          width: 200px;
+        }
+        .experienced s {
+          margin: left 0;
+        }
+        .tittle ul {
+          font-size: 16px;
+        }
+        .tittle ul li {
+          height: 100px;
+        }
+        .tittle img {
+          width: 50px;
+          height: 50px;
+          margin-left: 30px;
+        }
+        .tittle ul li p {
+          font-size: 20px;
+          display: contents;
+        }
+        @keyframes car {
+          from {
+            transform: translateX(0);
+          }
+          to {
+            transform: translateX(75px);
+          }
+        }
+        .touch h4 {
+          font-size: 40px;
+          height: 10px;
+        }
+        .touch {
+          width: 250px;
+          margin-bottom: 500px;
+          margin-left: 70px;
+
+          margin-top: 700px;
+        }
+        .touch ul li {
+          font-size: 18px;
+          width: 300px;
+          padding: 5px;
+        }
+        .w-50 {
+          margin-left: 200px;
+        }
+        #contactFrom {
+          height: 300px;
+          width: 300px;
+          position: absolute;
+          margin-top: 900px;
+          left: 14px;
+          margin-left: 20px;
+        }
+
+        #contact {
+          width: 500px;
+        }
+        .form-group {
+          margin-top: 0;
+        }
+        label {
+          font-size: 14px;
+        }
+        input[type="text"] {
+          height: 10px;
+        }
+        .bt-confirm {
+          margin-left: 100px;
+          font-size: 8px;
+        }
+        footer p {
+          letter-spacing: 0px;
+          font-size: 16px;
+          align-items: center;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="logo">Logo</div>
+      <div class="menu">Menu</div>
+      <nav>
+        <ol>
+          <li>
+            <a href="#"><i class="fa-regular fa-star"></i>About</a>
+          </li>
+          <li>
+            <a href="#"><i class="fa-regular fa-moon"></i> Experience</a>
+          </li>
+          <li>
+            <a href="#"><i class="fa-solid fa-ghost"></i>Portfolio </a>
+          </li>
+          <li>
+            <a href="#"><i class="fa-solid fa-jet-fighter"></i> Contact</a>
+          </li>
+        </ol>
+      </nav>
+    </header>
+    <section id="Banner">
+      <div class="slogan">
+        <h2>發揮無限創意，為您做出好設計</h2>
+      </div>
+      <div class="circle1"></div>
+      <div class="circle2"></div>
+      <div class="shape"></div>
+      <div class="triangle"></div>
+    </section>
+    <section class="container4">
+      <div class="persion">
+        <img src="./imgs/640.jpeg" alt="" />
+      </div>
+      <div class="description">
+        <h3>
+          <i class="fa-solid fa-vial-virus"></i>
+          追求改變醫療臨床資訊端的前端工程師
+        </h3>
+        <div class="Introduce">
+          <p>
+            我是陳延汝，在地區醫院內外科加護病房執業六年，時常擔任單位當班小組長，時常處理臨床、當班床位調度
+            問題，因此可適應高壓、快速處理調度的環境。於臨床發現資訊系統依舊有許多不完整，長對於醫護人員
+            造成治療上的不便，因此想設計出合適的網頁系統，供給醫療人員使用方便。
+          </p>
+        </div>
+        <div class="Degree">
+          <h3><i class="fa-solid fa-book-bookmark"></i> 經歷</h3>
+          <ul>
+            <li>
+              <i class="fa-regular fa-hospital"></i> 台安醫院內外科加護病房
+            </li>
+            <li>
+              <i class="fa-solid fa-stethoscope"></i> 台北榮總內科加護房訓練
+            </li>
+            <li>
+              <i class="fa-solid fa-truck-medical"></i> 慈濟醫院內科加護病房
+            </li>
+            <li>
+              <i class="fa-solid fa-hospital-user"></i> 慈濟醫院開刀房實習
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="experienced">
+      <div class="s">
+        <h3><i class="fa-brands fa-odysee"></i> 工作經歷</h3>
+        <div class="tittle">
+          <ul>
+            <li>
+              2022-2023
+              <img src="./imgs/北榮.png" alt="" />
+              <p>榮民醫院</p>
+              <div class="ambu">
+                <img src="./imgs/ambulance.webp" alt="" />
+              </div>
+            </li>
+            <li>
+              2018-2019 <img src="./imgs/慈濟.jpg" alt="" />
+              <p>慈濟醫院</p>
+              <div class="ambu">
+                <img src="./imgs/ambulance.webp" alt="" />
+              </div>
+            </li>
+            <li>
+              2019-2024
+              <img src="./imgs/台安.jpg" alt="" />
+              <p>台安醫院</p>
+              <div class="ambu">
+                <img src="./imgs/ambulance.webp" alt="" />
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+    <section id="Portfolio">
+      <h2>作品集</h2>
+      <div class="container">
+        <div class="card">
+          <div class="side">
+            <img src="imgs/flowers1.jpg" alt="Project 1" />
+          </div>
+          <div class="side back">Project 1</div>
+        </div>
+        <div class="card">
+          <div class="side">
+            <img src="imgs/japan.jpg" alt="Project 2" />
+          </div>
+          <div class="side back">Project 2</div>
+        </div>
+        <div class="card">
+          <div class="side">
+            <img src="imgs/pancake.jpg" alt="Project 3" />
+          </div>
+          <div class="side back">Project 3</div>
+        </div>
+        <div class="card">
+          <div class="side">
+            <img src="imgs/japan2.jpg" alt="Project 4" />
+          </div>
+          <div class="side back">Project 4</div>
+        </div>
+        <div class="card">
+          <div class="side">
+            <img src="imgs/photo2.jpg" alt="Project 5" />
+          </div>
+          <div class="side back">Project 5</div>
+        </div>
+        <div class="card">
+          <div class="side">
+            <img src="imgs/sea.jpg" alt="Project 6" />
+          </div>
+          <div class="side back">Project 6</div>
+        </div>
+        <div class="card">
+          <div class="side">
+            <img src="imgs/people2.jpg" alt="Project 7" />
+          </div>
+          <div class="side back">Project 7</div>
+        </div>
+        <div class="card">
+          <div class="side">
+            <img src="imgs/strawberry.jpg" alt="Project 8" />
+          </div>
+          <div class="side back">Project 8</div>
+        </div>
+        <div class="card">
+          <div class="side">
+            <img src="imgs/photo3.jpg" alt="Project 9" />
+          </div>
+          <div class="side back">Project 9</div>
+        </div>
+        <div class="card">
+          <div class="side">
+            <img src="imgs/food2.jpg" alt="Project 10" />
+          </div>
+          <div class="side back">Project 10</div>
+        </div>
+      </div>
+    </section>
+    <!-- 表單 -->
+
+    <section id="contact">
+      <div class="container00">
+        <div class="touch">
+          <h4>Contact Us</h4>
+
+          <ul>
+            <li>
+              <i class="fa-solid fa-pen"></i> 有任何問題或疑問，請聯絡我們
+            </li>
+            <li>
+              <i class="fa-solid fa-location-dot"></i> 台北市信義區信義路五段7號
+            </li>
+            <li><i class="fa-solid fa-phone"></i> 02-1234-5678</li>
+            <li><i class="fa-solid fa-envelope"></i> example@mail.com</li>
+          </ul>
+        </div>
+        <div class="w-50">
+          <form action="" id="contactFrom">
+            <div class="form-group">
+              <label for="Name">姓名</label>
+              <input type="text" name="name" id="name" />
+            </div>
+            <div class="form-group">
+              <label for="massenger">訊息</label>
+              <input type="text" name="massenger" id="massenger" />
+            </div>
+            <div class="form-group">
+              <label for="phone">電話</label>
+              <input type="text" name="phone" id="phone" />
+            </div>
+            <div class="form-group">
+              <label for="email">E-mail</label>
+              <input type="text" name="email" id="email" />
+            </div>
+            <input type="submit" class="bt-confirm" value="確定送出" />
+          </form>
+        </div>
+      </div>
+    </section>
+    <footer><p>copyright&copy;2023 macroViz.com</p></footer>
+  </body>
+</html>
